@@ -1,0 +1,10 @@
+services:
+  phpldapadmin:
+    build: frcharron/phpldapadmin
+    container_name: phpldapadmin
+    environment:
+      LDAP_HOST: openldap
+      LDAP_PORT: 389
+      LDAP_BASE_DN: "dc=example,dc=com"
+    expose:
+      - "6080"
